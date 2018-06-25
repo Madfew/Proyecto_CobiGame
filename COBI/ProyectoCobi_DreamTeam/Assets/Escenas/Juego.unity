@@ -172,7 +172,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 75664657}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9e870c8980c918a4eab10143cfe217f6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 4
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMov: 20
-  saltoFuerza: 500
+  saltoFuerza: 1500
   saltar: 0
 --- !u!1001 &105804398
 Prefab:
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 253698469}
   m_Layer: 0
   m_Name: Piso
-  m_TagString: Untagged
+  m_TagString: Piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,7 +356,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 253698467}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9e870c8980c918a4eab10143cfe217f6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 700981690}
   - component: {fileID: 700981689}
   m_Layer: 0
-  m_Name: Piso
+  m_Name: Techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,7 +570,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 700981687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.711437, y: 26.892622, z: -20.18718}
+  m_LocalPosition: {x: -33.711437, y: 25.3, z: -20.18718}
   m_LocalScale: {x: 45, y: 1, z: 80}
   m_Children: []
   m_Father: {fileID: 283068973}
@@ -582,7 +582,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 700981687}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9e870c8980c918a4eab10143cfe217f6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -721,7 +721,10 @@ MonoBehaviour:
   tiles:
   - {fileID: 1719713211385200, guid: 82b51ece562e3d2439eda6384b1cae3b, type: 2}
   - {fileID: 1652239370994368, guid: da1841f9a28abd849acab7b1eea7418b, type: 2}
-  orden: 0000000000000000000000000100000001000000000000000000000000000000
+  orden1: 0000000000000000000000000100000001000000
+  orden2: 000000000000000000000000000000000100000001000000
+  orden3: 
+  orden4: 
 --- !u!4 &723732627
 Transform:
   m_ObjectHideFlags: 0
@@ -1048,7 +1051,41 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1147334923}
+          m_MethodName: SetDownState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1147334923}
+          m_MethodName: SetUpState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
 --- !u!114 &1147334923
 MonoBehaviour:
@@ -1099,7 +1136,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299408212}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9e870c8980c918a4eab10143cfe217f6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1171,7 +1208,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364174030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -555, y: 275, z: 0}
+  m_LocalPosition: {x: -555, y: 274.7163, z: 0}
   m_LocalScale: {x: 1.0000023, y: 1.0000023, z: 1.0000023}
   m_Children: []
   m_Father: {fileID: 1897642336}
@@ -1293,7 +1330,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710983450}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9e870c8980c918a4eab10143cfe217f6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1532,8 +1569,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1897642332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 288, y: 162, z: 0}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalPosition: {x: 282, y: 158.5, z: 0}
+  m_LocalScale: {x: 0.440625, y: 0.440625, z: 0.440625}
   m_Children:
   - {fileID: 1833690051}
   - {fileID: 1102472178}
@@ -1565,7 +1602,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 16476cfece5f0b24cb501c3b2824dce3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16
+      value: 15.98
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 16476cfece5f0b24cb501c3b2824dce3, type: 3}
       propertyPath: m_LocalRotation.x
