@@ -57,4 +57,11 @@ public class MovJugador : MonoBehaviour {
         }
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Finish")
+        {
+            Debug.Log("Hoal");
+        }
+    }
 }

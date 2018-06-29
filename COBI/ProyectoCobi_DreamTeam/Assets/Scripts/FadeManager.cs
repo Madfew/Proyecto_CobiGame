@@ -10,6 +10,7 @@ public class FadeManager : MonoBehaviour {
     public Image negro;
     public Animator anim;
 
+    private MovJugador jugador;
     private CanvasGroup grupoFade;
     private float velocidadFade = 0.3f;
 
