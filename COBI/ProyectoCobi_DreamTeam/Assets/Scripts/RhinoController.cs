@@ -69,7 +69,7 @@ public class RhinoController : MonoBehaviour {
 	
 	IEnumerator rhinoRush()
 	{
-		if (IsRushing == true)
+		if (isRushing == true)
 		{
 			yield return new WaitForSeconds (startbWait);
 
