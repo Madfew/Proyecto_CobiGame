@@ -22,5 +22,14 @@ public class Menuactions : MonoBehaviour
     {
         SceneManager.LoadScene("Cinematicas");
     }
+    public void Cargarmenuprincipal()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+    public void volveraintentar()
+    {
+        SceneManager.LoadScene("Juego");
+    }
+
 }
 
