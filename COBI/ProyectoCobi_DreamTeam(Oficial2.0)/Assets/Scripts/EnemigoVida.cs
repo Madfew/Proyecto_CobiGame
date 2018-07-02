@@ -8,6 +8,7 @@ public class EnemigoVida : MonoBehaviour {
     public int vidaReciente;
     public float tiempoHundiendose = 2.5f;
     public AudioClip muerteAudio;
+    public int ScoreValue = 20;
 
     AudioSource enemigoAudio;
     ParticleSystem particulasHit;
@@ -64,7 +65,7 @@ public class EnemigoVida : MonoBehaviour {
 
         enemigoAudio.clip = muerteAudio;
         enemigoAudio.Play();
-
+        Scoremanager.puntaje += ScoreValue;
         enemigo.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         Destroy(gameObject, 1f);

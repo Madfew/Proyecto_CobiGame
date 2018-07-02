@@ -35,9 +35,12 @@ public class DañoGeneral : MonoBehaviour
             GetHurt();
         }
 
+    }
+    private void OnTriggerEnter(Collider obj)
+    {
         if (obj.gameObject.tag == "Pildora")
         {
-            Destroy(obj.gameObject, 1f);
+            Destroy(obj.gameObject);
             recuperarvida();
         }
     }
@@ -57,11 +60,11 @@ public class DañoGeneral : MonoBehaviour
 
     void recuperarvida()
     {
-        if (vida > 0)
+        if (vida < 5)
         {
             vida = vida + 1;
         }
-        hitpoints[vida].gameObject.SetActive(true);
+        hitpoints[vida - 1].gameObject.SetActive(true);
 
     }
 
