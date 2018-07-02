@@ -8,6 +8,7 @@ TagManager:
   - FadeImage
   - Enemigo
   - Pildora
+  - ZonaVena
   layers:
   - Default
   - TransparentFX

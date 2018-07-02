@@ -13,18 +13,21 @@ public class EnemigoVida : MonoBehaviour {
     ParticleSystem particulasHit;
     CapsuleCollider capsulaCollider;
     bool muerto;
+    EnemigoMov enemigo;
     //bool hundiendose;
     //Enemys enemigo;
 
-    void Start () {
+    void Start()
+    {
         enemigoAudio = GetComponent<AudioSource>();
         particulasHit = GetComponentInChildren<ParticleSystem>();
         capsulaCollider = GetComponent<CapsuleCollider>();
-        //enemigo = GetComponent<Enemys>();
+        enemigo = GetComponent<EnemigoMov>();
         vidaReciente = vidaInicial;
     }
 
-	void Update () {
+    void Update()
+    {
         //if (hundiendose)
         //{
         //    transform.Translate(-Vector3.up * tiempoHundiendose * Time.deltaTime);
@@ -62,7 +65,7 @@ public class EnemigoVida : MonoBehaviour {
         enemigoAudio.clip = muerteAudio;
         enemigoAudio.Play();
 
-        //enemigo.enabled = false;
+        enemigo.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         Destroy(gameObject, 1f);
     }

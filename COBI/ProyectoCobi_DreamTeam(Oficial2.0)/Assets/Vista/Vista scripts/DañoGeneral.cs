@@ -40,8 +40,6 @@ public class DañoGeneral : MonoBehaviour
             Destroy(obj.gameObject, 1f);
             recuperarvida();
         }
-
-
     }
 
     void GetHurt()

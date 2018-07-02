@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TilesManager : MonoBehaviour {
 
-    float velocidad = 25f;
+    float velocidad = 30f;
 
     void Start()
     {
