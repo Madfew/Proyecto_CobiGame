@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Piso
   - FadeImage
+  - Enemigo
+  - Pildora
   layers:
   - Default
   - TransparentFX

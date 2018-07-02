@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DañoGeneral : MonoBehaviour
 {
-
-    int vida = 100;
+    public Image[] hitpoints;
+    int vida = 5;
 
 
     // Use this for initialization
@@ -18,21 +19,53 @@ public class DañoGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            GetHurt();
+        }
+        */
+    }
+    
+    private void OnCollisionEnter(Collision obj)
+    {
+        if (obj.gameObject.tag == "Enemigo")
+        {
+            Destroy(obj.gameObject, 1f);
+            GetHurt();
+        }
+
+        if (obj.gameObject.tag == "Pildora")
+        {
+            Destroy(obj.gameObject, 1f);
+            recuperarvida();
+        }
+
 
     }
 
-    private void OnCollisionEnter(Collision enemigo)
+    void GetHurt()
     {
-        if (enemigo.gameObject.tag == "Enemigo")
+        if (vida > 0)
         {
-            vida = vida - 20;
-            Destroy(enemigo.gameObject, 1f);
+            vida = vida - 1;
         }
-
+        hitpoints[vida].gameObject.SetActive(false);
         if (vida == 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Derrota");
         }
+    }
+
+    void recuperarvida()
+    {
+        if (vida > 0)
+        {
+            vida = vida + 1;
+        }
+        hitpoints[vida].gameObject.SetActive(true);
+
     }
 
 }
+
