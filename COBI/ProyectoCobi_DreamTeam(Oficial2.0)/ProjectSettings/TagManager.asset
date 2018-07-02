@@ -9,6 +9,7 @@ TagManager:
   - Enemigo
   - Pildora
   - ZonaVena
+  - PosicionFinal
   layers:
   - Default
   - TransparentFX
