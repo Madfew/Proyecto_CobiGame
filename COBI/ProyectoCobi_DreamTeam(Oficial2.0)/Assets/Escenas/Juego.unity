@@ -226,10 +226,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
       propertyPath: m_IsTrigger
@@ -324,6 +320,9 @@ MonoBehaviour:
   - {fileID: 1069771852}
   - {fileID: 1262631288}
   - {fileID: 709516472}
+  "da\xF1oImagen": {fileID: 1499050772}
+  flashVelocidad: 5
+  flashColor: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!95 &75664659
 Animator:
   serializedVersion: 3
@@ -420,7 +419,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 75664657}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb388fc075848aa4dbf2951fb1a26cab, type: 3}
   m_Name: 
@@ -485,7 +484,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -509,7 +508,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1001 &76327324
 Prefab:
   m_ObjectHideFlags: 0
@@ -985,15 +984,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
   m_IsPrefabParent: 0
@@ -1123,15 +1113,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
@@ -1465,6 +1446,11 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
   m_IsPrefabParent: 0
@@ -1510,10 +1496,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
@@ -1700,10 +1682,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
@@ -2172,15 +2150,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
@@ -6479,15 +6448,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
   m_IsPrefabParent: 0
@@ -6533,10 +6493,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
@@ -6604,10 +6560,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
       propertyPath: m_IsTrigger
@@ -6673,10 +6625,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
@@ -6982,15 +6930,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
   m_IsPrefabParent: 0
@@ -7036,15 +6975,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
@@ -7290,15 +7220,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
@@ -7699,10 +7620,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
@@ -8737,15 +8654,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
   m_IsPrefabParent: 0
@@ -8898,15 +8806,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
@@ -9256,10 +9155,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4622723322823106, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9753,10 +9648,6 @@ Prefab:
       propertyPath: m_Name
       value: GlobuloBlanco (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
     - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
         type: 2}
       propertyPath: m_IsTrigger
@@ -9846,15 +9737,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
@@ -10026,15 +9908,6 @@ Prefab:
     - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
       propertyPath: m_Name
       value: GlobuloBlanco (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391989199007078, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
-      propertyPath: m_TagString
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 135264768117126036, guid: f258f07a864d9d346a7dd607d5d4bab6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f258f07a864d9d346a7dd607d5d4bab6, type: 2}
