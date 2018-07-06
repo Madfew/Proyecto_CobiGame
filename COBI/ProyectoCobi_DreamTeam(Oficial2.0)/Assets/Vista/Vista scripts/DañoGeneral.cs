@@ -27,17 +27,15 @@ public class DañoGeneral : MonoBehaviour
         */
     }
     
-    private void OnCollisionEnter(Collision obj)
-    {
-        if (obj.gameObject.tag == "Enemigo")
-        {
-            Destroy(obj.gameObject, 1f);
-            GetHurt();
-        }
 
     }
     private void OnTriggerEnter(Collider obj)
     {
+         if (obj.gameObject.tag == "Enemigo")
+        {
+            Destroy(obj.gameObject, 1f);
+            GetHurt();
+        }
         if (obj.gameObject.tag == "Pildora")
         {
             Destroy(obj.gameObject);
