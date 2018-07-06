@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaInicial: 30
   vidaReciente: 0
-  tiempoHundiendose: 2.5
+  tiempoHundiendose: 10
   muerteAudio: {fileID: 8300000, guid: 21cc6240c4bc7224d827e94ae76e7f83, type: 3}
   ScoreValue: 20
 --- !u!114 &114833955231497230

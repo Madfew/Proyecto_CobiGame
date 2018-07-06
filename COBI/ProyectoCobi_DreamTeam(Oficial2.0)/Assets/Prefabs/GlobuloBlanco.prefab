@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114270308084443820}
   - component: {fileID: 135264768117126036}
   - component: {fileID: 54512154365384640}
+  - component: {fileID: 114187591891490990}
   m_Layer: 0
   m_Name: GlobuloBlanco
   m_TagString: Enemigo
@@ -57,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfadfc052158394fabc86224b139414, type: 2}
   m_StaticBatchInfo:
@@ -100,6 +102,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114187591891490990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1391989199007078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb4707e9f6f834e978306be0076c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "ataqueDa\xF1o": 20
 --- !u!114 &114270308084443820
 MonoBehaviour:
   m_ObjectHideFlags: 1

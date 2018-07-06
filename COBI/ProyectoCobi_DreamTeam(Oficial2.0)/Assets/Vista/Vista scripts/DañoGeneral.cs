@@ -18,7 +18,7 @@ public class DañoGeneral : MonoBehaviour
     {
          if (obj.gameObject.tag == "Enemigo")
         {
-            Destroy(obj.gameObject, 1f);
+            Destroy(obj.gameObject, 2f);
             GetHurt();
         }
         if (obj.gameObject.tag == "Pildora")
@@ -50,7 +50,6 @@ public class DañoGeneral : MonoBehaviour
         hitpoints[vida - 1].gameObject.SetActive(true);
 
     }
-
 }
 
 

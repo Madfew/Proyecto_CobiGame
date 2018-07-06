@@ -20,7 +20,6 @@ public class Scoremanager : MonoBehaviour
 
     void Update()
     {
-
         text.text = "Puntaje:" + puntaje;
     }
 }

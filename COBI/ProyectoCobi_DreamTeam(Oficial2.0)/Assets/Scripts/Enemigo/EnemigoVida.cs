@@ -15,8 +15,7 @@ public class EnemigoVida : MonoBehaviour {
     CapsuleCollider capsulaCollider;
     bool muerto;
     EnemigoMov enemigo;
-    //bool hundiendose;
-    //Enemys enemigo;
+    bool hundiendose;
 
     void Start()
     {
@@ -25,14 +24,16 @@ public class EnemigoVida : MonoBehaviour {
         capsulaCollider = GetComponent<CapsuleCollider>();
         enemigo = GetComponent<EnemigoMov>();
         vidaReciente = vidaInicial;
+
+        hundiendose = false;
     }
 
     void Update()
     {
-        //if (hundiendose)
-        //{
-        //    transform.Translate(-Vector3.up * tiempoHundiendose * Time.deltaTime);
-        //}
+        if (hundiendose)
+        {
+            transform.Translate(-Vector3.up * tiempoHundiendose * Time.deltaTime);
+        }
     }
 
     public void recibeDaño(int cantidad, Vector3 puntoHit)
@@ -53,6 +54,11 @@ public class EnemigoVida : MonoBehaviour {
         }
     }
 
+    public void EmpezarHundirse()
+    {
+        hundiendose = true;
+    }
+
     void Muriendo()
     {
         Debug.Log("Muerte");
@@ -61,13 +67,13 @@ public class EnemigoVida : MonoBehaviour {
 
         capsulaCollider.isTrigger = true;
 
-        //EmpezarHundirse();
+        EmpezarHundirse();
 
         enemigoAudio.clip = muerteAudio;
         enemigoAudio.Play();
         Scoremanager.puntaje += ScoreValue;
         enemigo.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 2f);
     }
 }
