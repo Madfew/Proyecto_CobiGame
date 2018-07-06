@@ -9,26 +9,11 @@ public class DañoGeneral : MonoBehaviour
     public Image[] hitpoints;
     int vida = 5;
 
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            GetHurt();
-        }
-        */
-    }
-    
 
     }
+    
     private void OnTriggerEnter(Collider obj)
     {
          if (obj.gameObject.tag == "Enemigo")
@@ -67,4 +52,5 @@ public class DañoGeneral : MonoBehaviour
     }
 
 }
+
 
