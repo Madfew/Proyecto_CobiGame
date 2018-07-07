@@ -14,15 +14,15 @@ public class CreacionProcedural : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        CreacionTileNivel1();
+        CreacionTileNivel();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        
 	}
 
-    public void CreacionTileNivel1()
+    public void CreacionTileNivel()
     {
         for (int i = 0; i < orden1.Length; i++)
         {
@@ -36,10 +36,6 @@ public class CreacionProcedural : MonoBehaviour {
             puntoInicio = tile.transform.Find("Helper").position;
         }
 
-    }
-
-    public void CreacionTileNivel2()
-    {
         for (int i = 0; i < orden3.Length; i++)
         {
             GameObject tile = Instantiate(tiles[orden3[i]], puntoInicio, Quaternion.identity);

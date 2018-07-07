@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemigoMov : MonoBehaviour {
 
-    public float velocidad;
+    public static float velocidad = 35f;
 
 	// Use this for initialization
 	void Start () {

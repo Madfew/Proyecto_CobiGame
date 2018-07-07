@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlataformaManager : MonoBehaviour {
 
-    public float velocidad;
+    public static float velocidad = 40f;
     float timer;
     bool enMov;
 
@@ -27,6 +27,7 @@ public class PlataformaManager : MonoBehaviour {
         {
             if (timer >= 5f)
             {
+                gameObject.GetComponent<BoxCollider>().isTrigger = true;
                 enMov = true;
             }
         }
