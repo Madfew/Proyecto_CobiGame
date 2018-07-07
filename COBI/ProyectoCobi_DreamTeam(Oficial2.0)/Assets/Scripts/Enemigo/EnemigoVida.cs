@@ -13,8 +13,9 @@ public class EnemigoVida : MonoBehaviour {
     AudioSource enemigoAudio;
     ParticleSystem particulasHit;
     CapsuleCollider capsulaCollider;
-    bool muerto;
+    Animator anim;
     EnemigoMov enemigo;
+    bool muerto;
     bool hundiendose;
 
     void Start()
@@ -23,6 +24,7 @@ public class EnemigoVida : MonoBehaviour {
         particulasHit = GetComponentInChildren<ParticleSystem>();
         capsulaCollider = GetComponent<CapsuleCollider>();
         enemigo = GetComponent<EnemigoMov>();
+        anim = GetComponentInChildren<Animator>();
         vidaReciente = vidaInicial;
 
         hundiendose = false;
@@ -56,13 +58,13 @@ public class EnemigoVida : MonoBehaviour {
 
     public void EmpezarHundirse()
     {
+        anim.SetTrigger("Muerto");
         hundiendose = true;
+        Destroy(gameObject, 2f);
     }
 
     void Muriendo()
     {
-        Debug.Log("Muerte");
-
         muerto = true;
 
         capsulaCollider.isTrigger = true;
@@ -74,6 +76,5 @@ public class EnemigoVida : MonoBehaviour {
         Scoremanager.puntaje += ScoreValue;
         enemigo.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
-        Destroy(gameObject, 2f);
     }
 }

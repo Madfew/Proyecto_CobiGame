@@ -21,7 +21,6 @@ public class MovJugador : MonoBehaviour {
     void Start () {
 
         rb = GetComponent<Rigidbody>();
-
 	}
 	
 	void Update () {

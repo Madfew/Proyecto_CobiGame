@@ -16,6 +16,7 @@ public class DisparoJugador : MonoBehaviour {
     LineRenderer lineaDisparo;
     AudioSource audioDisparo;
     float tiempoEfectos = 0.2f;
+    Animator anim;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class DisparoJugador : MonoBehaviour {
         disparoParticulas = GetComponent<ParticleSystem>();
         lineaDisparo = GetComponent<LineRenderer>();
         audioDisparo = GetComponent<AudioSource>();
+        anim = GetComponentInParent<Animator>();
     }
 
     void Update()
@@ -32,6 +34,14 @@ public class DisparoJugador : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Z) && tiempo >= tiempoEntreDisparo && Time.timeScale != 0)
         {
             Disparando();
+            anim.SetBool("enDisparo",true);
+        }
+        else
+        {
+            if (Input.GetKeyUp(KeyCode.Z))
+            {
+                anim.SetBool("enDisparo", false);
+            }
         }
 
         if (tiempo >= tiempoEntreDisparo * tiempoEfectos)

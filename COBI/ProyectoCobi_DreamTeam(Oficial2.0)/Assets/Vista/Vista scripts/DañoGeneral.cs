@@ -13,7 +13,9 @@ public class DañoGeneral : MonoBehaviour
     public Color flashColor = new Color(1, 0f, 0f, 0.1f);
 
     AudioSource jugadorAudio;
+    Animator anim;
     MovJugador jugador;
+    float timer;
     bool muerto;
     bool daño;
 
@@ -21,11 +23,13 @@ public class DañoGeneral : MonoBehaviour
     {
         jugadorAudio = GetComponent<AudioSource>();
         jugador = GetComponent<MovJugador>();
+        anim = GetComponent<Animator>();
     }
 
 
     void Update()
     {
+        timer += Time.deltaTime;
         if (daño)
         {
             dañoImagen.color = flashColor;
@@ -35,15 +39,25 @@ public class DañoGeneral : MonoBehaviour
             dañoImagen.color = Color.Lerp(dañoImagen.color, Color.clear, flashVelocidad * Time.deltaTime);
         }
         daño = false;
+
+        if (vida == 0 && muerto)
+        {
+            Debug.Log("Muerto");
+            if (timer >= 3f)
+            {
+                SceneManager.LoadScene("Derrota");
+            }
+        }
     }
     
     private void OnTriggerEnter(Collider obj)
     {
-         if (obj.gameObject.tag == "Enemigo")
+        if (obj.gameObject.tag == "Enemigo")
         {
             Destroy(obj.gameObject, 2f);
             GetHurt();
         }
+
         if (obj.gameObject.tag == "Pildora")
         {
             Destroy(obj.gameObject);
@@ -55,7 +69,7 @@ public class DañoGeneral : MonoBehaviour
         if (collision.gameObject.tag == "Enemigo")
         {
             GetHurt();
-        }
+        } 
     }
 
     void GetHurt()
@@ -70,6 +84,7 @@ public class DañoGeneral : MonoBehaviour
         if (vida == 0 && !muerto)
         {
             Muerto();
+            jugadorAudio.enabled = false;
         }
     }
 
@@ -84,9 +99,10 @@ public class DañoGeneral : MonoBehaviour
     }
 
     void Muerto(){
+        timer = 0f;
         muerto = true;
         jugador.enabled = false;
-        SceneManager.LoadScene("Derrota");
+        anim.SetTrigger("Muerto");
     }
 }
 
