@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DañoGeneral : MonoBehaviour
 {
     public Image[] hitpoints;
-    int vida = 5;
+    public int vida = 5;
     public Image dañoImagen;
     public float flashVelocidad = 5f;
     public Color flashColor = new Color(1, 0f, 0f, 0.1f);
@@ -42,7 +42,6 @@ public class DañoGeneral : MonoBehaviour
 
         if (vida == 0 && muerto)
         {
-            Debug.Log("Muerto");
             if (timer >= 3f)
             {
                 SceneManager.LoadScene("Derrota");

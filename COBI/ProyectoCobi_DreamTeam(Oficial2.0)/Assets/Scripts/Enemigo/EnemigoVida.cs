@@ -18,6 +18,8 @@ public class EnemigoVida : MonoBehaviour {
     bool muerto;
     bool hundiendose;
 
+    private GameObject vida;
+
     void Start()
     {
         enemigoAudio = GetComponent<AudioSource>();
@@ -28,6 +30,8 @@ public class EnemigoVida : MonoBehaviour {
         vidaReciente = vidaInicial;
 
         hundiendose = false;
+
+        vida = GameObject.Find("BarraVidaEnemigo");
     }
 
     void Update()
@@ -74,6 +78,9 @@ public class EnemigoVida : MonoBehaviour {
         enemigoAudio.clip = muerteAudio;
         enemigoAudio.Play();
         Scoremanager.puntaje += ScoreValue;
+
+        vida.SendMessage("Daño", 10);
+
         enemigo.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
     }
